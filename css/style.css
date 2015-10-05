@@ -1,0 +1,72 @@
+h1 {
+    font-size: 180%;
+}
+h2 {
+    font-size: 160%;
+}
+h3 {
+    font-size: 140%;
+}
+h4 {
+    font-size: 120%;
+}
+h5 {
+    font-size: 100%;
+}
+h6 {
+    font-size: 80%;
+}
+header {
+    background-color: skyblue;
+    padding: 5px;
+}
+section {
+    background-color: lightgray;
+    padding: 5px;
+}
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+}
+/* ---Prefixing---
+* You might need to use prefixes for safari and some other browsers for everything
+* to work. You can either put your css into a codepen(http://codepen.io/) and use
+* an autoprefixer there or check out http://shouldiprefix.com/#flexbox.
+* If that doesn't work just google "flexbox prefixing" and you should find a solution.
+*/
+/* ===EXAMPLE 1===
+* Lets start off by defining a flexbox "container".
+* We do that by setting "display: flex"
+*/
+div.flexbox {
+    display: flex; /* flex | inline-flex */
+}
+/* This makes it so our div beceomes a flexbox container.
+* If you try this out yourself, you might notice that the items in the container
+* becomes aligned in a row. This is the default state but can be changed with "flex-direction"
+*/
+div.flexbox {
+    flex-direction: row; /* row(default) | row-reverse | column | column-reverse */
+}
+/* row-reverse and column-reverse changes the items direction in the current flexbox.
+* Any other direction-oriented design-choices while using a "-reverse" value will
+* become reversed.
+*
+* Normally, the items in your flexbox will try to fit into one single line.
+* This can be changed with "flex-wrap" so that the items stack up on top of each other instead.
+* You can even decide the direction in which they are getting stacked.
+*/
+div.flexbox {
+    flex-wrap: wrap; /* nowrap(default) | wrap | wrap-reverse */
+}
+/* Depending on your windows' size you won't see any difference using either nowrap or wrap.
+* Try resizing your window and you should see the items getting stacked if you use the value wrap.
+*
+* There's a shorthand property you can use instead of "flex-direction" and "flex-wrap"
+* that is called "flex-flow".
+* It can look like this: "flex-flow: row nowrap(default)". But you can of course
+* replace any of the values with their respective alternatives. If you skip to use
+* of of them, the default will be used("flex-flow: wrap" is the same as
+* "flex-flow: row wrap")
+*/
