@@ -35,6 +35,7 @@ footer {
 * an autoprefixer there or check out http://shouldiprefix.com/#flexbox.
 * If that doesn't work just google "flexbox prefixing" and you should find a solution.
 */
+
 /* ===EXAMPLE 1===
 * Lets start off by defining a flexbox "container".
 * We do that by setting "display: flex"
@@ -46,7 +47,7 @@ div.flexbox {
 * If you try this out yourself, you might notice that the items in the container
 * becomes aligned in a row. This is the default state but can be changed with "flex-direction"
 */
-div.flexbox {
+div.ex1 {
     flex-direction: row; /* row(default) | row-reverse | column | column-reverse */
 }
 /* row-reverse and column-reverse changes the items direction in the current flexbox.
@@ -57,7 +58,7 @@ div.flexbox {
 * This can be changed with "flex-wrap" so that the items stack up on top of each other instead.
 * You can even decide the direction in which they are getting stacked.
 */
-div.flexbox {
+div.ex1 {
     flex-wrap: wrap; /* nowrap(default) | wrap | wrap-reverse */
 }
 /* Depending on your windows' size you won't see any difference using either nowrap or wrap.
@@ -67,10 +68,36 @@ div.flexbox {
 * that is called "flex-flow".
 * It can look like this: "flex-flow: row nowrap(default)". But you can of course
 * replace any of the values with their respective alternatives. If you skip to use
-* of of them, the default will be used("flex-flow: wrap" is the same as
+* one of them, the default will be used("flex-flow: wrap" is the same as
 * "flex-flow: row wrap")
 */
 
 /* ===EXAMPLE 2===
-* 
+* This time we'll look more into how the content inside of our flexbox container is displayed
+* A common technique(in my experience at least) used is 'justify-content'.
+* It's a really good tool for changing the alignment of items in the main axis.
+* Let's try it out!
+*/
+div.ex2 {
+    justify-content: flex-start; /* flex-start(default) | flex-end | center | space-between | space-around */
+}
+/* flex-start: pack all the items to the start line.
+* flex-end: pack all items to the end line.
+* center: simply center the items on the line.
+* space-between: distributes the items evenly with the same amount of space, as well as putting the first item at the start and the last item at the end.
+* space-around: distributes the items evenly with the same amount of space. The space is not visually equal since every item has the same space. At the start and the end there will be shorter space than the rest items because the space add up with each other.
+*
+* Sidenote: If you don't see any difference you may have to increase the width of the window. This is because justify-content only uses the extra space to align the items.
+*/
+
+/* To change the alignment of the items on the cross axis we use 'align-items'.
+*/
+div.ex2 {
+    align-items: center; /* flex-start | flex-end | center | baseline | stretch(default) */
+}
+/* flex-start: places the cross-start margin edge of the items on the cross-start line.
+* flex-end: places the cross-end margin edge of the items on the cross-end line.
+* center: centers the items in the cross-axis.
+* baseline: places the items along the baselane of each element(for example, the bottom line of a h2-element will be aligned with the bottom line of a p-element, not matter the size of either).
+* strech: stretches the items to fill the container(still takes min/max-width into consideration).
 */
