@@ -34,6 +34,9 @@ footer {
 * to work. You can either put your css into a codepen(http://codepen.io/) and use
 * an autoprefixer there or check out http://shouldiprefix.com/#flexbox.
 * If that doesn't work just google "flexbox prefixing" and you should find a solution.
+*
+* As of this writing, I am using Chrome version 45.0.2454.101 to test my code.
+* I suggest Chrome or FireFox for testing but IE should be up to date as well.
 */
 
 /* ===EXAMPLE 1===
@@ -100,4 +103,28 @@ div.ex2 {
 * center: centers the items in the cross-axis.
 * baseline: places the items along the baselane of each element(for example, the bottom line of a h2-element will be aligned with the bottom line of a p-element, not matter the size of either).
 * strech: stretches the items to fill the container(still takes min/max-width into consideration).
+*/
+
+/* ===EXAMPLE 3===
+* In our third example, we'll go through 'align-content'.
+* Usually you don't need to define width or height for flexbox to shine(even though you'll probably do that when creating your own pages it's not actually needed).
+* But for 'align-content' to be noticeable we'll set a static width and height because the property has no effect on only one line of items.
+*/
+div.ex3 {
+    height: 800px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid gray; /* For it to be easier to see the outline */
+}
+/* We also need to set the 'flex-flow' to 'row wrap'
+*/
+div.ex3 {
+    flex-flow: row wrap;
+}
+/* Then finally we can try out any of the different values for 'align-content'
+*/
+div.ex3 {
+    align-content: space-around; /* flex-start | flex-end | center | stretch(default) | space-between | space-around */
+}
+/* The values work about the same as for 'justify-content' and 'align-items'.
 */

@@ -5,10 +5,14 @@ Jag använder mig även av en 'reset.css' för att sidorna ska se likadana ut i 
 
 I själva filen 'styles.css' skriver jag koden för flexbox-exemplen och kommenterar vad koden gör och vad det finns för alternativ/värden att använda.
 
-*Exempel 1* [row 39 - 73]
+*Exempel 1* [row 42 - 76]
+
 Förklarar och går igenom hur man skapar en flexbox container och visar hur man kan påverka innehållsflödet.
 
-*Exempel 2* [row 75 - 103]
+*Exempel 2* [row 78 - 106]
+
 Här går jag igenom 'justify-content' samt 'align-items'.
 
-*Exempel 3* [row n - n]
+*Exempel 3* [row 108 - 130]
+
+Avslutar exemplen av properties för själva flex-container med 'align-content'.
