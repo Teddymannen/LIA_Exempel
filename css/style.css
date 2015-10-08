@@ -128,3 +128,79 @@ div.ex3 {
 }
 /* The values work about the same as for 'justify-content' and 'align-items'.
 */
+
+/* ===EXAMPLE 4===
+* And now we'll go through the properties of the flex-items.
+* Normally, flex items appear in the same order as you wrote them in your html-document.
+* With the property 'order' we can easily change that.
+*/
+div.ex4 {
+    flex-flow: column nowrap;
+    width: 500px;
+    height: 500px;
+}
+div.ex4 header {
+    order: 3; /* normally the first item to be displayed */
+}
+div.ex4 section {
+    order: 1; /* normally the second item to be displayed */
+}
+div.ex4 footer {
+    order: 2; /* normally the third item to be displayed */
+}
+/* Note: negative integer-values work as well. */
+
+/* ===EXAMPLE 5===
+* Flex-items can be set to grow if needed(for example, to fill out available space with a container).
+* This is done with the property 'flex-grow'.
+* It can even be used to evenly distribute items and their size in proportion to other items in the same flexbox container.
+* If you set flex-grow to 1 for all items, they will take up equal space. And if you make one item have flex-grow 2 for example, that item will take up twice of the overflowing space as the other items.
+*/
+div.ex5 header {
+    flex-grow: 1; /* default 0 */
+}
+div.ex5 section {
+    flex-grow: 3; /* default 0, this item will grow more */
+}
+div.ex5 footer {
+    flex-grow: 1; /* default 0 */
+}
+/* You can use "flex-shrink: <number>" to make certain flex-items shrink(and take up more of the extra space) more than other items.
+*/
+div.ex5 header {
+    flex-shrink: 1; /* default 1 */
+}
+div.ex5 section {
+    flex-shrink: 1; /* default 1 */
+}
+div.ex5 footer {
+    flex-shrink: 3; /* default 1, this item will shrink more */
+}
+/* Negative values are invalid. */
+
+/* It's not easy to show how 'flex-shrink' work in action.
+* To demonstrate it easier we'll use 'flex-basis', which is a property that sets the initial size of an element before remaining space is distributed(if at all).
+* "flex-basis: <length> | auto;"
+*/
+div.ex5 header {
+    flex-basis: 10em; /* default auto */
+}
+div.ex5 section {
+    flex-basis: 10em; /* default auto */
+}
+div.ex5 footer {
+    flex-basis: 10em; /* default auto */
+}
+/* We set the 'flex-basis' to 10em. So whenever the window becomes 30em or wider, the items will grow acording to the 'flex-grow'.
+* If the window becomes less than 30em wide, the items will shrink acording to the values of 'flex-shrink'.
+*
+* So try changing the width of your window and change the values to easier understand the properties.
+* Also, if you set 'flex-basis' to 0, the extra space around content won't be factored in distribution.
+* While auto make it so the extra space distributes based on the 'flex-grow' value.
+* Like this: http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg
+*
+* To make things even easier, there is a shorthand for 'flex-grow', 'flex-shrink' and 'flex-basis'.
+* It's written like this: "flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]"
+* The default is "flex: 0 1 auto;" but 'flex-shrink' and 'flex-basis' are both optional. You can use any, none or both of them.
+* I highly recommend you to use the shorthand property instead of the individual ones.
+*/

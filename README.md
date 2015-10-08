@@ -16,3 +16,11 @@ Här går jag igenom 'justify-content' samt 'align-items'.
 *Exempel 3* [row 108 - 130]
 
 Avslutar exemplen av properties för själva flex-container med 'align-content'.
+
+*Exempel 4* [row 132 - 151]
+
+Går igenom propertyn 'order'.
+
+*Exempel 5* [row 153 - 206]
+
+Går igenom 'flex-grow', 'flex-shrink', 'flex-basis' och samlingskoden för dem alla tre; 'flex'.
