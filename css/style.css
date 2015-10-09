@@ -204,3 +204,42 @@ div.ex5 footer {
 * The default is "flex: 0 1 auto;" but 'flex-shrink' and 'flex-basis' are both optional. You can use any, none or both of them.
 * I highly recommend you to use the shorthand property instead of the individual ones.
 */
+
+/* ===EXAMPLE 6===
+* Last but not least, I'll show you the property 'align-self' which work similar like 'align-items' (example 2).
+* The thing with 'align-self' is that it overrides the values of 'align-items' with its own values on individual items to further control the layout of your items.
+*/
+article.flex-item {
+    background-color: darkgreen;
+    color: lightgreen;
+    padding: 2px;
+    margin: 2px;
+}
+/* Just adding some colors to the articles to differentiate them from the section.
+* We can also make the section itself a flexbox container by setting its display to flex(example 1).
+*/
+section.flexbox {
+    display: flex;
+    flex-flow: row;
+    height: 300px; /* Setting a fixed height to show how 'align-self' could look. */
+    width: 100%;
+}
+article.flex-item {
+    flex: 1; /* setting 'flex-grow' to 1 to make all items equally wide. */
+}
+/* Then we can start making changes to the 'align-self'-property. Its default value is auto and depends on the values of 'align-items'.
+*/
+section.flexbox {
+    align-items: stretch; /* Change this value if you want auto to look different. */
+}
+article.it1 {
+    align-self: auto;
+}
+article.it2 {
+    align-self: center;
+}
+article.it3 {
+    align-self: flex-end;
+}
+/* 'align-self' adds another strong tool to change the layout of your website just the way you want it.
+*/
