@@ -28,5 +28,6 @@ Går igenom 'flex-grow', 'flex-shrink', 'flex-basis' och samlingskoden för dem 
 **Exempel 6 _[row 208 - 245]_**
 
 Går igenom 'align-self' som delvis har med 'align-items' från *Exempel 2* att göra.
+
 ---
 I mappen 'Sample' finns ett litet smakprov på hur en enkel responsiv sida kan se ut med hjälp av flexbox.
